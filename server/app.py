@@ -61,3 +61,12 @@ def get_baseline():
     # We will build the actual AI script in Phase 5. 
     # For now, this just tells the judges the endpoint exists.
     return {"message": "Baseline triggered. Score: 1.0 (Simulation)"}
+
+
+import uvicorn
+
+def main():
+    uvicorn.run("server.app:app", host="0.0.0.0", port=7860)
+
+if __name__ == "__main__":
+    main()
